@@ -43,6 +43,27 @@ git push
 ```
 python app-root/repo/manage.py createsuperuser
 ```
+### Running locally and the django tutorial
+This repository was designed to allow you to quickly develop and deploy a website to Openshift.  For local development, make sure you have the following setup:
+
+- Virtualenv for this instance of python / django.
+- pip (should be installed with virtualenv)
+
+Once you have those installed, install the requirements for this repository:
+```
+pip install -r requirements.txt
+```
+
+This will install django 1.7 on your local machine.
+
+Once you have django installed, you can continue the tutorial from here https://docs.djangoproject.com/en/1.7/intro/tutorial01/#database-setup, although the default database and application configuration should be sufficient.
+
+### Static files
+Static files are already setup and ready to use for either local or Openshift use. 
+
+Place all static files / folders into the static folder.  They will be collected with collectstatic when pushed to openshift.
+
+DO NOT PUT STATIC FILES INTO /wsgi/static/, this is merely a place holder for collectstatic.
 
 ### Configuration details
 When a git push is done, the .openshift/action_hooks/deploy is executed.  This script does two things:
