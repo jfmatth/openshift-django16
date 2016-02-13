@@ -1,7 +1,7 @@
 Django v1.65 on OpenShift v3.2014
 =
 A git repository to get up and running quickly with django v1.65 and Openshift.
-# Update - I have stopped updating this repo in favor of my https://github.com/jfmatth/openshift-django17 version.
+# Update - I have stopped updating this repo in favor of my https://github.com/jfmatth/openshift-django version.
 
 ###Features
 * Ready to use for local development
